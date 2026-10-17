@@ -1,4 +1,6 @@
-# discord-platform-markdown
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/gwyntel/discord-platform-markdown-skill)
+
+# discord-platform-markdown-skill
 
 Complete Discord markdown master guide for LLMs. Every syntax Discord supports — and every syntax it refuses — plus ANSI color, timestamps, mentions, escaping, which message surfaces actually render markup, and how Discord formatting sabotages downstream analysis if a pipeline reads raw text naively.
 
