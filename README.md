@@ -4,20 +4,31 @@
 
 Complete Discord markdown master guide for LLMs. Every syntax Discord supports — and every syntax it refuses — plus ANSI color, timestamps, mentions, escaping, which message surfaces actually render markup, and how Discord formatting sabotages downstream analysis if a pipeline reads raw text naively.
 
-## Install
+## Install with Vercel Skills CLI
 
-Drop-in Agent Skill. Copy the directory into your agent's skills path:
-
-```bash
-git clone https://github.com/gwyntel/discord-platform-markdown-skill.git
-cp -r discord-platform-markdown ~/.hermes/skills/discord-platform-markdown
-```
-
-Or install from the raw SKILL.md:
+This repository is a single-skill package with its entry point at the repository root (`SKILL.md`). Install it for Hermes Agent globally:
 
 ```bash
-hermes skills install https://raw.githubusercontent.com/gwyntel/discord-platform-markdown-skill/main/SKILL.md
+npx skills add gwyntel/discord-platform-markdown-skill --skill discord-platform-markdown --agent hermes-agent -g -y
 ```
+
+To install into the current project instead, omit `-g`. The skill teaches Discord Markdown and is used as agent guidance; it does not add commands, runtime code, or a Discord integration. Compatible clients can install it too by replacing `hermes-agent` with their agent ID.
+
+Update the installed skill with:
+
+```bash
+npx skills update discord-platform-markdown
+```
+
+The CLI updates from the recorded source. If the install was made from a local clone or a different source, rerun `npx skills add <source> --skill discord-platform-markdown --agent hermes-agent -g -y` from that source to refresh it.
+
+## Troubleshooting
+
+- **Skill not discovered:** confirm the repository's root `SKILL.md` has valid YAML frontmatter with `name` and `description`; use the exact skill name `discord-platform-markdown` and `--skill` option above.
+- **Wrong install location/agent:** use `-g` for user-wide or omit it for project scope, and set `--agent hermes-agent` (or your client's supported agent ID).
+- **Permission or network errors:** check GitHub access and that the CLI can write to the selected agent's skills directory; retry with the appropriate user permissions rather than running as root.
+
+Canonical source: <https://github.com/gwyntel/discord-platform-markdown-skill>.
 
 ## What's inside
 
