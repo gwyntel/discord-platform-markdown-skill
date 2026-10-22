@@ -12,7 +12,7 @@ This repository is a single-skill package with its entry point at the repository
 npx skills add gwyntel/discord-platform-markdown-skill --skill discord-platform-markdown --agent hermes-agent -g -y
 ```
 
-To install into the current project instead, omit `-g`. The skill teaches Discord Markdown and is used as agent guidance; it does not add commands, runtime code, or a Discord integration. Compatible clients can install it too by replacing `hermes-agent` with their agent ID.
+To install into the current project instead, omit `-g`. The skill teaches Discord Markdown and is used as agent guidance; it does not add commands, runtime code, or a Discord integration. Claude Code and Codex are supported by current Vercel Skills CLI releases; replace `hermes-agent` with `claude-code` or `codex`, subject to the installed CLI's supported target list. This is a knowledge-only skill and requires no runtime tools.
 
 Update the installed skill with:
 
