@@ -4,7 +4,11 @@
 
 Complete Discord markdown master guide for LLMs. Every syntax Discord supports — and every syntax it refuses — plus ANSI color, timestamps, mentions, escaping, which message surfaces actually render markup, and how Discord formatting sabotages downstream analysis if a pipeline reads raw text naively.
 
+## Install
+
 ## Install with Vercel Skills CLI
+
+Prerequisite: Node.js 22.20 or later.
 
 This repository is a single-skill package with its entry point at the repository root (`SKILL.md`). Install it for Hermes Agent globally:
 
