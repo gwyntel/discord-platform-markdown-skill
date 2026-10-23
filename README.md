@@ -24,7 +24,7 @@ Update the installed skill with:
 npx skills update discord-platform-markdown
 ```
 
-The CLI updates from the recorded source. If the install was made from a local clone or a different source, rerun the original install command (`npx skills add <source> --skill discord-platform-markdown --agent hermes-agent -g -y` for this global Hermes install), changing only `<source>` to the desired source. Keep the same `--agent` and scope options (`-g` for global; omit it for project scope).
+The CLI updates from the recorded source. If the install was made from a local clone or a different source, rerun the original install command (`npx skills add <source> --skill discord-platform-markdown --agent <original-agent> -y` (add `-g` only if the original install was global; omit it for a project install)), changing only `<source>` to the desired source. Keep the same `--agent` and scope options (`-g` for global; omit it for project scope).
 
 ## Troubleshooting
 
